@@ -2,7 +2,7 @@
   "name": "givemewinner",
   "version": "1.0.0",
   "description": "The project which help to fast pick random user from commentaries/likes/etc.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +17,18 @@
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
     "googleapis": "^45.0.0",
-    "request": "^2.88.0"
+    "pug": "^2.0.4",
+    "request": "^2.88.0",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^1.7.0"
   }
 }
