@@ -1,5 +1,5 @@
 const express = require('express');
-const picker = require('./picker.js');
+const { pickWinner } = require('./picker.js');
 
 const router = express.Router();
 
@@ -16,7 +16,7 @@ router.param('videoId', (req, resp, next, value) => {
 router.get('/:videoId', (req, resp) => {
   const videoId = req.params.videoId;
   if (videoId) {
-    picker.pickWinner(videoId)
+    pickWinner(videoId)
       .then((result) => {
         resp.json(result);
       });

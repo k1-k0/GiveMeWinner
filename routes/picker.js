@@ -41,7 +41,6 @@ async function getComments(videoId) {
   while (nextPageToken) {
     options.pageToken = nextPageToken;
 
-    // TODO: Use Promise.all ?
     const nextResponse = await youtube.commentThreads.list(options);
     comments = comments.concat(processResponse(nextResponse, getPersonInfo));
     nextPageToken = nextResponse.data.nextPageToken;
@@ -51,7 +50,6 @@ async function getComments(videoId) {
 
   return comments;
 }
-
 
 async function pickWinner(videoId) {
   const candidates = await getComments(videoId);
