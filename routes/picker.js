@@ -1,8 +1,9 @@
 const { google } = require('googleapis');
+const { readAPIKey } = require('../utils/apigetter');
 
 const youtube = google.youtube({
   version: 'v3',
-  auth: 'INSERT_HERE_YOUR_API_KEY'
+  auth: readAPIKey(),
 });
 
 function getPersonInfo(item) {
